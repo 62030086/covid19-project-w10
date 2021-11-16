@@ -1,0 +1,37 @@
+.board{
+    column-count: 4;
+    column-gap: 1rem;
+}
+.card{
+    width: 84%;
+    height: 200px;
+    background: #ccc;
+    padding: 10%;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+}
+.card.nc{
+    background: #41a7ff;
+}
+.card.tc{
+    background: rgb(21, 54, 238);
+}
+.card.ce{
+    background: rgb(238, 21, 202);
+}
+.card.tce{
+    background: rgb(119, 10, 101);
+}
+.card.nd{
+    background: rgb(226, 47, 15);
+}
+.card.td{
+    background: rgb(146, 33, 13);
+}
+.card.nr{
+    background: rgb(70, 235, 20);
+}
+.card.tr{
+    background: rgb(37, 110, 8);
+}

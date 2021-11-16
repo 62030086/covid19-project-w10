@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<title>Covid-19 Thaisociety</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap">
+<link rel="stylesheet" href="SumDaily.html">
+<link rel="stylesheet" href="SumDailyV2.html">
+<link rel="stylesheet" href="CountryDaily.html">
+<link rel="stylesheet" href="InformDaily.html">
+<link rel="stylesheet" href="Sum12.html">
+<link rel="stylesheet" href="Country12.html">
+<link rel="stylesheet" href="Inform12.html">
+<link rel="stylesheet" href="Sum3.html">
+<link rel="stylesheet" href="Country3.html">
+<link rel="stylesheet" href="Inform3.html">
+<style>
+body{
+	font-family: "Prompt", sans-serif;
+}
+h1{
+	font-family: "Prompt", sans-serif;
+}
+h2{
+	font-family: "Prompt", sans-serif;
+}
+h2.a{
+	font-family: "Prompt", sans-serif;
+    text-align: center;
+    padding: 20x;
+}
+h3.a{
+	font-family: "Prompt", sans-serif;
+    text-align: center;
+    padding: 20x;
+}
+h3{
+	font-family: "Prompt", sans-serif;
+}
+p{
+	line-height: 0.5;
+   }
+.header2{
+    padding: 10px;
+    background-color: #10824D;
+    text-align: center;
+    color: #ffffff;
+  }
+    [type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+    }
+
+    [type="date"]::-webkit-inner-spin-button {
+    display: none;
+    }
+
+    [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    }
+.card{
+	float:left;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 550px;
+  height: 300px;
+  border-radius: 50px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+<body>
+
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:160px">
+  <h3 class="w3-bar-item">Menu</h3>
+  	<div class="w3-dropdown-hover">
+      <button class="w3-button"><p>รายงานสถานการณ์</p><p>ประจำวัน</p></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="SumDaily" class="w3-bar-item w3-button">ภาพรวม</a>
+        <a href="SumDailyV2" class="w3-bar-item w3-button">ภาพรวม Ver.2</a>
+        <a href="CountryDaily" class="w3-bar-item w3-button">แยกตามจังหวัด</a>
+        <a href="InformDaily" class="w3-bar-item w3-button">ข้อมูลผู้ป่วย</a>
+      </div>
+    </div>
+  	<div class="w3-dropdown-hover">
+      <button class="w3-button"><p>รายงานสถานการณ์</p><p>ระลอก1-2</p></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="Sum12" class="w3-bar-item w3-button">ภาพรวม</a>
+        <a href="Country12" class="w3-bar-item w3-button">แยกตามจังหวัด</a>
+        <a href="Inform12" class="w3-bar-item w3-button">ข้อมูลผู้ป่วย</a>
+      </div>
+    </div>
+  	<div class="w3-dropdown-hover">
+       <button class="w3-button"><p>รายงานสถานการณ์</p><p>ระลอก3</p></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="Sum3" class="w3-bar-item w3-button">ภาพรวม</a>
+        <a href="Country3" class="w3-bar-item w3-button">แยกตามจังหวัด</a>
+        <a href="Inform3" class="w3-bar-item w3-button">ข้อมูลผู้ป่วย</a>
+      </div>
+    </div>
+</div>
+
+
+<div style="margin-left:160px">
+
+<div class="w3-container" style="background-color:#66CDAA;">
+  <h1>Covid-19 Thai Society</h1>
+</div>
+
+<div class="w3-container">
+
+        <h2>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามจังหวัด</h2>
+
+        <div class="" id="main">
+            <div class="w3-container">
+                <input class="w3-left"type="date" id="dateInput" style="padding-top: 1px; margin-right: 20px; color:#000000;"> 
+                <input  id="provinceTH" class="form-control w3-left" list="datalistOptions"  placeholder="โปรดเลือกจังหวัด"
+              style="width: 20%; margin-right:20px;">
+                  <datalist id="datalistOptions">
+                      <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                      <option value="นนทบุรี">นนทบุรี</option>
+                      <option value="ปทุมธานี">ปทุมธานี</option>
+                      <option value="สมุทรปราการ">สมุทรปราการ</option>
+                      <option value="สมุทรสาคร">สมุทรสาคร</option>
+                      <option value="นครปฐม">นครปฐม</option>
+                      <option value="ภูเก็ต">ภูเก็ต</option>
+                      <option value="กระบี่">กระบี่</option>
+                      <option value="กาญจนบุรี">กาญจนบุรี</option>
+                      <option value="กาฬสินธุ์">กาฬสินธุ์"</option>
+                      <option value="กำแพงเพชร">กำแพงเพชร</option>
+                      <option value="ขอนแก่น">ขอนแก่น</option>
+                      <option value="จันทบุรี">จันทบุรี</option>
+                      <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+                      <option value="ชัยนาท">ชัยนาท</option>
+                      <option value="ชัยภูมิ">ชัยภูมิ</option>
+                      <option value="ชุมพร">ชุมพร</option>
+                      <option value="ชลบุรี">ชลบุรี</option>
+                      <option value="เชียงใหม่">เชียงใหม่</option>
+                      <option value="เชียงราย">เชียงราย</option>
+                      <option value="ตรัง">ตรัง</option>
+                      <option value="ตราด">ตราด</option>
+                      <option value="ตาก">ตาก</option>
+                      <option value="นครนายก">นครนายก</option>
+                      <option value="นครพนม">นครพนม</option>
+                      <option value="นครราชสีมา">นครราชสีมา</option>
+                      <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+                      <option value="นครสวรรค์">นครสวรรค์</option>
+                      <option value="นราธิวาส">นราธิวาส</option>
+                      <option value="น่าน">น่าน</option>
+                      <option value="บึงกาฬ">บึงกาฬ</option>
+                      <option value="บุรีรัมย์">บุรีรัมย์</option>
+                      <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+                      <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+                      <option value="ปัตตานี">ปัตตานี</option>
+                      <option value="พะเยา">พะเยา</option>
+                      <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+                      <option value="พังงา">พังงา</option>
+                      <option value="พิจิตร">พิจิตร</option>
+                      <option value="พิษณุโลก">พิษณุโลก</option>
+                      <option value="เพชรบุรี">เพชรบุรี</option>
+                      <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+                      <option value="แพร่">แพร่</option>
+                      <option value="พัทลุง">พัทลุง</option>
+                      <option value="มหาสารคาม">มหาสารคาม</option>
+                      <option value="มุกดาหาร">มุกดาหาร</option>
+                      <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+                      <option value="ยโสธร">ยโสธร</option>
+                      <option value="ยะลา">ยะลา</option>
+                      <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+                      <option value="ระนอง">ระนอง</option>
+                      <option value="ระยอง">ระยอง</option>
+                      <option value="ราชบุรี">ราชบุรี</option>
+                      <option value="ลพบุรี">ลพบุรี</option>
+                      <option value="ลำปาง">ลำปาง</option>
+                      <option value="ลำพูน">ลำพูน</option>
+                      <option value="เลย">เลย</option>
+                      <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                      <option value="สกลนคร">สกลนคร</option>
+                      <option value="สงขลา">สงขลา</option>
+                      <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+                      <option value="สระแก้ว">สระแก้ว</option>
+                      <option value="สระบุรี">สระบุรี</option>
+                      <option value="สิงห์บุรี">สิงห์บุรี</option>
+                      <option value="สุโขทัย">สุโขทัย</option>
+                      <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+                      <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+                      <option value="สุรินทร์">สุรินทร์</option>
+                      <option value="สตูล">สตูล</option>
+                      <option value="หนองคาย">หนองคาย</option>
+                      <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+                      <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+                      <option value="อุดรธานี">อุดรธานี</option>
+                      <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+                      <option value="อุทัยธานี">อุทัยธานี</option>
+                      <option value="อุบลราชธานี">อุบลราชธานี</option>
+                      <option value="อ่างทอง">อ่างทอง</option>
+                      <option value="ไม่ระบุ">ไม่ระบุ</option>
+                  </datalist>
+                  <button class="btn btn-success w3-left" type="button" onclick="myFunction()" style="margin-right:20px;">ค้นหา</button>
+              </div>
+  <p></p>
+          <div class="container">
+                            <div class="card memu-row1" style="margin-left: 100px; margin-bottom: 50px;">
+                                  <h3 class="a">ผู้ติดเชื่อรายใหม่</h2>
+                                  <h3 id="new_case" class="a"></h3>
+                           </div>
+                           <div class="card memu-row2" style="margin-left: 100px; margin-bottom: 50px;">
+                                <h3 class="a">ผู้ติดเชื่อสะสม</h2>
+                                <h3 id="total_case" class="a"></h2>
+                              </div>
+                           </div>
+          
+  
+          
+                    <div class="card memu-row3" style="margin-left: 100px; margin-bottom: 50px;">
+                         <h3 class="a">ผู้ติดเชื่อรายใหม่ภายในประเทศ</h2>
+                         <h3 id="new_case_excludeabroad" class="a"></h3>
+                    </div>
+                    <div class="card memu-row4" style="margin-left: 100px; margin-bottom: 50px;">
+                         <h3 class="a">ผู้ติดเชื่อสะสมภายในประเทศ</h2>
+                         <h3 id="total_case_excludeabroad" class="a"></h2>
+                    </div>
+         
+  
+          
+                    <div class="card memu-row5" style="margin-left: 100px; margin-bottom: 50px;">
+                         <h3 class="a">เสียชีวิต</h2>
+                         <h3 id="new_death" class="a"></h3>
+                    </div>
+                    <div class="card memu-row6" style="margin-left: 100px; margin-bottom: 50px;">
+                         <h3 class="a">เสียชีวิตสะสม</h2>
+                         <h3 id="total_death" class="a"></h2>
+                    </div>             
+          </div>
+
+         
+          
+      </div>
+
+           
+</div>
+</body>
+</html>
+
+
+
+
+
+
+<script>
+    let covid19data = [];
+    document.getElementById('main').style.visibility = "hidden";
+
+
+    async function getapi() {
+        // console.log("kkk");
+        const response = await fetch("https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces");
+        // fetch() timeouts at 300 seconds in Chrome
+        const data = await response.json();
+        console.log(data);
+        covid19data = data;
+        document.getElementById('main').style.visibility = "visible";
+        document.getElementById('relodedata').style.visibility = "hidden";
+
+    }
+
+
+    getapi();
+
+    function myFunction() {
+
+        let dateInput = document.getElementById("dateInput").value;
+        let provinceTH = document.getElementById("provinceTH").value;
+        console.log(dateInput);
+        console.log(provinceTH);
+        let searchcovid19data = covid19data.find((tree) => {
+            if (tree.txn_date === dateInput && tree.province === provinceTH) return true;
+        })
+
+        console.log(searchcovid19data);
+        document.getElementById('new_case').innerHTML = searchcovid19data.new_case;
+        document.getElementById('new_case_excludeabroad').innerHTML = searchcovid19data.new_case_excludeabroad;
+        document.getElementById('new_death').innerHTML = searchcovid19data.new_death;
+        document.getElementById('total_case').innerHTML = searchcovid19data.total_case;
+        document.getElementById('total_case_excludeabroad').innerHTML = searchcovid19data.total_case_excludeabroad;
+        document.getElementById('total_death').innerHTML = searchcovid19data.total_death;
+    }
+</script>
+
+<style>
+    body {
+        background-color: #faf8f8;
+    }
+
+    .headline {
+        color: rgb(20, 20, 20);
+        font-size: 30px;
+        font-family: 'font-family:verdana', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .memulink {
+        padding: 3em;
+        margin-top: 3em;
+    }
+
+    .card-size {
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+    }
+
+
+    .card-box {
+        height: 100px;
+        border-radius: 10px;
+    }
+
+
+    .memu-row1 {
+        background-color: #ff0000;
+        border: 6px solid #ff0000;
+
+    }
+
+    .memu-row2 {
+        background-color: #33ff33;
+        border: 6px solid #33ff33;
+    }
+
+    .memu-row3 {
+        background-color: #ffa500;
+        border: 6px solid #ffa500;
+
+    }
+
+    .memu-row4 {
+        background-color: #ffff00;
+        border: 6px solid #ffff00;
+    }
+
+    .memu-row5 {
+        background-color: #808080;
+        border: 6px solid #808080;
+    }
+    .memu-row6 {
+        background-color: #cdcdcd;
+        border: 6px solid #cdcdcd;
+    }
+</style>

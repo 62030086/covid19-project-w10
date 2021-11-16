@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<title>Covid-19 Thaisociety</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap">
+
+<style>
+body,
+h1,
+h2,
+h3,
+h4,
+h5{
+	font-family: "Prompt", sans-serif;
+}
+
+p{
+	line-height: 0.5;
+   }
+
+.header2{
+    padding: 10px;
+    background-color: #10824D;
+    text-align: center;
+    color: #ffffff;
+  }
+    [type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+    }
+
+    [type="date"]::-webkit-inner-spin-button {
+    display: none;
+    }
+
+    [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    }
+
+.Mcontainer0{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Mcontainer1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.Mcontainer2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.block1,
+.block2,
+.block3,
+.block4,
+.block5{
+    display: block;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 5px ;
+    text-align: center ;
+    border-radius: 5px ;
+    width: 250px;
+    height: 150px;
+}
+
+.block1{
+    background: #FF7F50
+}
+.block2{
+    background: #FF6347
+}
+.block3{
+    background: #F08080	
+}
+.block4{
+    background: #7CFC00
+}
+.block5{
+    background: #A9A9A9
+}
+
+div.table-title {
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    padding:5px;
+    width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Prompt", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 90%;
+  padding: 5px;
+  width: 90%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#fff;;
+  background:#1F5E4B;
+  border-bottom:4px solid #0a0a0a;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#6f748b;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#7482ff;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+</style>
+
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:160px">
+  <h3 class="w3-bar-item">Menu</h3>
+  	<div class="w3-dropdown-hover">
+      <button class="w3-button"><p>รายงานสถานการณ์</p><p>ประจำวัน</p></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="SumDaily" class="w3-bar-item w3-button">ภาพรวม</a>
+        <a href="SumDailyV2" class="w3-bar-item w3-button">ภาพรวม Ver.2</a>
+        <a href="CountryDaily" class="w3-bar-item w3-button">แยกตามจังหวัด</a>
+        <a href="InformDaily" class="w3-bar-item w3-button">ข้อมูลผู้ป่วย</a>
+      </div>
+    </div>
+  	<div class="w3-dropdown-hover">
+      <button class="w3-button"><p>รายงานสถานการณ์</p><p>ระลอก1-2</p></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="Sum12" class="w3-bar-item w3-button">ภาพรวม</a>
+        <a href="Country12" class="w3-bar-item w3-button">แยกตามจังหวัด</a>
+        <a href="Inform12" class="w3-bar-item w3-button">ข้อมูลผู้ป่วย</a>
+      </div>
+    </div>
+  	<div class="w3-dropdown-hover">
+       <button class="w3-button"><p>รายงานสถานการณ์</p><p>ระลอก3</p></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="Sum3" class="w3-bar-item w3-button">ภาพรวม</a>
+        <a href="Country3" class="w3-bar-item w3-button">แยกตามจังหวัด</a>
+        <a href="Inform3" class="w3-bar-item w3-button">ข้อมูลผู้ป่วย</a>
+      </div>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:160px">
+    <div class="w3-container" style="background-color:#66CDAA;">
+        <h1>Covid-19 Thai Society</h1>
+    </div>
+
+<!-- หัวข้อ -->
+<div class="w3-container">
+    <h2>ข้อมูลผู้ป่วยประจำวัน</h2>
+
+<!-- ค้นหาวันที่ -->
+<select id="sel-province" name="province" class="form-select" aria-label="Province" ;>
+  
+    <option value="" selected="">--เลือกจังหวัด--</option>
+    <option value="กระบี่">กระบี่</option>
+    <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+    <option value="นนทบุรี">นนทบุรี</option>
+    <option value="ปทุมธานี">ปทุมธานี</option>
+    <option value="สมุทรปราการ">สมุทรปราการ</option>
+    <option value="สมุทรสาคร">สมุทรสาคร</option>
+    <option value="นครปฐม">นครปฐม</option>
+    <option value="ภูเก็ต">ภูเก็ต</option>
+    <option value="กาญจนบุรี">กาญจนบุรี</option>
+    <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+    <option value="กำแพงเพชร">กำแพงเพชร</option>
+    <option value="ขอนแก่น">ขอนแก่น</option>
+    <option value="จันทบุรี">จันทบุรี</option>
+    <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+    <option value="ชัยนาท">ชัยนาท</option>
+    <option value="ชัยภูมิ">ชัยภูมิ</option>
+    <option value="ชุมพร">ชุมพร</option>
+    <option value="ชลบุรี">ชลบุรี</option>
+    <option value="เชียงใหม่">เชียงใหม่</option>
+    <option value="เชียงราย">เชียงราย</option>
+    <option value="ตรัง">ตรัง</option>
+    <option value="ตราด">ตราด</option>
+    <option value="ตาก">ตาก</option>
+    <option value="นครนายก">นครนายก</option>
+    <option value="นครพนม">นครพนม</option>
+    <option value="นครราชสีมา">นครราชสีมา</option>
+    <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+    <option value="นครสวรรค์">นครสวรรค์</option>
+    <option value="นราธิวาส">นราธิวาส</option>
+    <option value="น่าน">น่าน</option>
+    <option value="บึงกาฬ">บึงกาฬ</option>
+    <option value="บุรีรัมย์">บุรีรัมย์</option>
+    <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+    <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+    <option value="ปัตตานี">ปัตตานี</option>
+    <option value="พะเยา">พะเยา</option>
+    <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+    <option value="พังงา">พังงา</option>
+    <option value="พิจิตร">พิจิตร</option>
+    <option value="พิษณุโลก">พิษณุโลก</option>
+    <option value="เพชรบุรี">เพชรบุรี</option>
+    <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+    <option value="แพร่">แพร่</option>
+    <option value="พัทลุง">พัทลุง</option>
+    <option value="มหาสารคาม">มหาสารคาม</option>
+    <option value="มุกดาหาร">มุกดาหาร</option>
+    <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+    <option value="ยโสธร">ยโสธร</option>
+    <option value="ยะลา">ยะลา</option>
+    <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+    <option value="ระนอง">ระนอง</option>
+    <option value="ระยอง">ระยอง</option>
+    <option value="ราชบุรี">ราชบุรี</option>
+    <option value="ลพบุรี">ลพบุรี</option>
+    <option value="ลำปาง">ลำปาง</option>
+    <option value="ลำพูน">ลำพูน</option>
+    <option value="เลย">เลย</option>
+    <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+    <option value="สกลนคร">สกลนคร</option>
+    <option value="สงขลา">สงขลา</option>
+    <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+    <option value="สระแก้ว">สระแก้ว</option>
+    <option value="สระบุรี">สระบุรี</option>
+    <option value="สิงห์บุรี">สิงห์บุรี</option>
+    <option value="สุโขทัย">สุโขทัย</option>
+    <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+    <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+    <option value="สุรินทร์">สุรินทร์</option>
+    <option value="สตูล">สตูล</option>
+    <option value="หนองคาย">หนองคาย</option>
+    <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+    <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+    <option value="อุดรธานี">อุดรธานี</option>
+    <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+    <option value="อุทัยธานี">อุทัยธานี</option>
+    <option value="อุบลราชธานี">อุบลราชธานี</option>
+    <option value="อ่างทอง">อ่างทอง</option>
+    <option value="ไม่ระบุ">ไม่ระบุ</option>
+  </select>
+  <button type="button" onclick=provincesearch()>ค้นหา</button>
+</div>
+</div> 
+
+<!-- แสดงข้อมูล -->
+        <div class="table-title">
+                    
+        </div>
+        <table id="tabledata" width="100%" class="table-fill" style="margin-left: 150px;">
+            <thead>
+                <tr>
+                    <th class="text-left">ลำดับ</th>
+                    <th class="text-left">เพศ</th>
+                    <th class="text-left">อายุ</th>
+                    <th class="text-left">จังหวัด</th>
+                    <th class="text-left">ประเทศ</th>
+                    <th class="text-left">ความเสี่ยง</th>
+                    <th class="text-left">สาเหตุการติดเชื้อ</th>
+                </tr> 
+            </thead>
+        <tbody class="table-hover">
+        <tr>
+            <td class="text-left"></td>
+            <td class="text-left"></td>
+            <td class="text-left"></td>
+            <td class="text-left"></td>
+            <td class="text-left"></td>
+            <td class="text-left"></td>
+            <td  class="text-left"></td>
+        </tr>
+
+
+        </tbody>
+        </table>
+            
+            <footer style="margin-left: 200px; margin-top: 100px;">
+                <h5>ผู้จัดทำ : วัชกร วังชากร 62030076 &nbsp; E-mail : 62030076@kmitl.ac.th </h5>
+            </footer>                
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+
+<script src="/javascripts/InformDaily.js"></script>
