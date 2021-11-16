@@ -1,9 +1,9 @@
 # covid19-project-w10
 ## Getting Started by 62030086
 ### 1.Clone
--cmd ไปยังตำเเหน่งที่ต้องการว่างไฟล์
--พิมพ์ `git clone https://github.com/62030086/covid19-project-w10`
--จากเปิด vscode open folder ไปยังตำเเหน่งที่ว่างไฟล์ไว้ หรือ พิมพ์ `code` ใน cmd ในตำเเหน่งที่ว่างไฟล์ไว้
+- cmd ไปยังตำเเหน่งที่ต้องการว่างไฟล์
+- พิมพ์ `git clone https://github.com/62030086/covid19-project-w10`
+- จากเปิด vscode open folder ไปยังตำเเหน่งที่ว่างไฟล์ไว้ หรือ พิมพ์ `code` ใน cmd ในตำเเหน่งที่ว่างไฟล์ไว้
 ## 2.install npm
 -เปิด Terminal
 -พิมพ์ `npm install`
