@@ -8,7 +8,7 @@
 -เปิด Terminal
 -พิมพ์ `npm install`
 ## 3.RUN
--run โดยใช้คำสั่ง 'npm start'
+-run โดยใช้คำสั่ง `npm start`
 
 ## คณะผู้จัดทำ
 สิรวิชญ์ บุญภูมิ  62030086
